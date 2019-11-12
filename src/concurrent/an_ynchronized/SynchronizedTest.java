@@ -35,6 +35,9 @@ package concurrent.an_ynchronized;
  *  2> 偏向锁在Java6，7 都是默认启用的，但是如果他在应用程序启动几秒钟后才激活，如果有必要可以使用JVM参数关闭延迟
  *     -XX：BiasedLoockingStartupDeLay=0
  *     关闭偏向锁:-XX:-UseBiasedLocking=flase
+ *
+ *  轻量级锁：
+ *
  */
 public class SynchronizedTest {
 }
