@@ -4,7 +4,7 @@ public class MonitorObject {
 }
 
 class MyTest{
-    MonitorObject object= new MonitorObject();
+    private MonitorObject object= new MonitorObject();
 
     public void  doWait(){
         synchronized (object){
