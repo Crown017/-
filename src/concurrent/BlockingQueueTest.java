@@ -8,13 +8,13 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 使用BlockingQueue实现生产者消费者模型
  */
-public class Test3 {
+public class BlockingQueueTest {
     private static AtomicInteger count = new AtomicInteger(0);
     //创建一个阻塞队列
     private ReentrantLock lock = new ReentrantLock();
     final BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(10);
     public static void main(String[] args) {
-        Test3 test3 = new Test3();
+        BlockingQueueTest test3 = new BlockingQueueTest();
         new Thread(test3.new Producer()).start();
         new Thread(test3.new Consumer()).start();
         new Thread(test3.new Producer()).start();

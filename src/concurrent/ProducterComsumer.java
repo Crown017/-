@@ -2,7 +2,7 @@ package concurrent;
 
 import java.util.Queue;
 
-public class Producter {
+public class ProducterComsumer {
 
 
     private static Queue<String> queue;

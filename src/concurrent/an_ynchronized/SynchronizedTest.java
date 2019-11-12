@@ -29,10 +29,12 @@ package concurrent.an_ynchronized;
  *  偏向锁：
  *      一个线程获取第一次一个Monitor对象的时候，会在MARK WORD中存入锁的偏向锁的标志，以及当前线程的ThreadID。
  *      当线程再次获取Monitor对象的时候会直接进入方法，执行里面的代码。从而避免了用户态跟内核态的切换。
- *  1> 偏向锁的释放
+ *  1> 偏向锁的释放(偏向锁使用了一种等到竞争条件出现才释放锁的机制。当其他的线程尝试竞争偏向锁,持有偏向锁的线程才会释放锁)
  *     当有其他线程获取Monitor对象的时候，会检查是否是偏向锁，跟当前线程的ID是否与Monitor对象的存储的ID一样。
  *     如果一样则运行方法。不一样则cas操作把Thread ID设置为Null，并且升级锁的标志为轻量级锁
- *
+ *  2> 偏向锁在Java6，7 都是默认启用的，但是如果他在应用程序启动几秒钟后才激活，如果有必要可以使用JVM参数关闭延迟
+ *     -XX：BiasedLoockingStartupDeLay=0
+ *     关闭偏向锁:-XX:-UseBiasedLocking=flase
  */
 public class SynchronizedTest {
 }
