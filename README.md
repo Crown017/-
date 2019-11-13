@@ -4,7 +4,7 @@
 对Java并发,原理的分析,以及JUC包下面的源码分析
 
 
-####线程与进程
+#### 线程与进程
 
 
 
@@ -13,15 +13,15 @@
 
 #### Object类中并发相关的方法
 
-#####1.wait 方法
-#####2.notify
-#####3.notifyAll
+##### 1.wait 方法
+##### 2.notify
+##### 3.notifyAll
 
 
 
 
-####Java中常见的锁
-#####1. synchronized
+#### Java中常见的锁
+##### 1. synchronized
    1. 锁的升级
    2. 锁的原理
 ##### 2. Lock
