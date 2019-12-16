@@ -1,4 +1,4 @@
-package concurrent;
+package concurrent.test_demo;
 
 public class MonitorObject {
 }

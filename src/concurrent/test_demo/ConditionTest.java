@@ -1,4 +1,4 @@
-package concurrent;
+package concurrent.test_demo;
 
 /**
  * Lock 用于解决互斥的问题

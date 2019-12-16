@@ -1,4 +1,4 @@
-package concurrent;
+package concurrent.test_demo;
 
 // 以下代码来源于【参考 1】
 class VolatileExample {
