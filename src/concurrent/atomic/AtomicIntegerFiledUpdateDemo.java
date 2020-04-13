@@ -1,6 +1,7 @@
 package concurrent.atomic;
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
+import java.util.concurrent.atomic.AtomicStampedReference;
 
 public class AtomicIntegerFiledUpdateDemo implements Runnable {
 

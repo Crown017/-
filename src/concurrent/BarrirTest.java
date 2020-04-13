@@ -4,6 +4,24 @@ import java.util.Random;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.TimeUnit;
 
+
+/**
+ * CountDownLatch 跟 CyclicBarrier 的区别
+ *
+ *
+ * CyclicBarrier中的数量事可以复用的
+ *
+ *
+ * 1. CyclicBarrier中定义了两个变量一个count 、 parties
+ * 2.当第一个线程来的时候会调用Condition的await() 方法 然后 --count
+ * 3. 当线程数达到parties的数量就会调用condition条件变量的signAll 唤醒其他被调用的线程。
+ * 4. 还会给count重新赋值parties，开启新的一个Generation
+ *
+ * 5.parties 变量就是保存初始化值
+ *
+ *
+ */
+
 public class BarrirTest {
 
 
@@ -49,28 +67,6 @@ class Student implements Runnable{
     }
 
 }
-
-class Car implements Runnable{
-
-    private CyclicBarrier cyclicBarrier;
-
-    public Car(CyclicBarrier cyclicBarrier) {
-        this.cyclicBarrier = cyclicBarrier;
-    }
-
-    @Override
-    public void run() {
-        try {
-            cyclicBarrier.await();
-
-            System.out.println("Car start speed to park");
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-    }
-}
-
 
 
 

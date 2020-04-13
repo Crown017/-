@@ -7,6 +7,8 @@ import java.util.concurrent.TimeUnit;
 public class CountLatchTest {
 
     public static void main(String[] args) throws Exception{
+
+        //
         CountDownLatch countDownLatch = new CountDownLatch(3);
 
 
@@ -70,6 +72,7 @@ class Car implements Runnable{
     @Override
     public void run() {
         try {
+            //会检查计数器值是不是0，不为零，会进入阻塞队列当中
             downLatch.await();
             System.out.println("wait  all person");
         }catch (Exception e){
